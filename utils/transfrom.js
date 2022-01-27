@@ -52,6 +52,7 @@ async function getChainsCoinData(gain_1, gain_7, drop_1, drop_7) {
 async function getChainsData() {
     const url_name = await getUrlName();
     const url_set = await getChainsUrl(url_name);
+    console.log(url_name,'111',url_set,'111')
     const up_chain = [];
     _.forEach(url_set, async u => {
         const row_data = await axios(u[1]);
